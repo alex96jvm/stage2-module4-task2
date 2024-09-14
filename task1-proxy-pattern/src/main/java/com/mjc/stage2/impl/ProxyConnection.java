@@ -10,8 +10,8 @@ public class ProxyConnection implements Connection {
     }
 
     public void reallyClose() {
-        if (!isClosed()) {
-            close();
+        if (!realConnection.isClosed()) {
+            realConnection.close();
         }
     }
 
